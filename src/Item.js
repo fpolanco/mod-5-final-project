@@ -15,11 +15,12 @@ const [likes, setLikes] = useState(0);
 
 if (props.item) {
 return (
-<div>
-{props.item.image ? <img src={props.item.image} alt="uploaded content"/> : " "}
-{props.item.video ?<video src={props.item.video} /> : " "}
+<div class="item">
+{!!props.item.image ? <img src={props.item.image} alt="uploaded content"/> : " "}
+{!!props.item.video ?<video src={props.item.video} width="320" height="240" controls /> : " " }
+
 <LikeButton itemId={Item.id}/>
-<DeleteButton/>
+<DeleteButton handleDelete={props.handleDelete} itemId={props.item.id}/>
 
 {/* <button onClick={() => setLikes(likes)}>
     Like 

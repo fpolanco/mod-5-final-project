@@ -13,6 +13,13 @@ import ReactPlayer from "react-player"
 
 
 const App = () => {
+  const [faves, setFaves] = useState([])
+
+  // addFave = () => {
+   
+  // });
+  // };
+
 
   // const [isLoginModalOpen, setLoginModal] = React.useState(false);
 
@@ -43,7 +50,19 @@ const App = () => {
           console.log(data, value)
           setValue([...value, data])
         })
-    }
+   }
+
+   const handleDelete= (id) => {
+    fetch(`http://localhost:3000/items/${id}`, {
+      method:"DELETE"
+   }).then(r => r.json())
+     .then(data => 
+      {
+       const updateItems = value.filter(item => item.id !== data)
+       setValue(updateItems)
+      }
+      )
+  } 
 
 return (
   <div>
@@ -73,7 +92,7 @@ return (
     <br></br>
     <NewItemForm handleSubmit={handleSubmit}/>
     <br></br>
-    <ItemContainer value={value}/>
+    <ItemContainer value={value} handleDelete={handleDelete}/>
     <Item/>
     <br></br>
     <br></br>
