@@ -38,11 +38,11 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
         >
           <Typography className={classes.heading}>What's on my ballot?</Typography>
-          <Typography className={classes.secondaryHeading}>Find information on every candidate on ballot</Typography>
+          <Typography className={classes.secondaryHeading}></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Listed Candidates
+            Voting information differs by state. For more information based on your home state fill out your address information at <a href={"https://www.vote411.org/"}>Vote411.org </a>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -52,14 +52,14 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Where can I go vote?</Typography>
+          <Typography className={classes.heading}>How can I check my registration status?</Typography>
           <Typography className={classes.secondaryHeading}>
-            Find your nearest polling booth
+            
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Hopefully implement google civic API
+          Are you registered to vote? Check your registration status <a href={"https://www.vote.org/am-i-registered-to-vote/"}>here !</a>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -69,14 +69,14 @@ export default function ControlledAccordions() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography className={classes.heading}>How do I navigate the voting process?</Typography>
+          <Typography className={classes.heading}>Where do candidates stand on key issues?</Typography>
           <Typography className={classes.secondaryHeading}>
             
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Third Answer
+            Check out <a href={"https://ballotpedia.org/Presidential_election,_2020#Presidential_candidates_on_the_issues"}>this</a> in depth resources on where candidates stand on many issues
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -86,7 +86,7 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>Fourth Question</Typography>
+          <Typography className={classes.heading}>Want to know more about candidates?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

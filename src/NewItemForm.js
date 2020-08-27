@@ -19,19 +19,20 @@ export default class NewItemForm extends React.Component {
     onSubmit = (e) => { //transfer to app.js
         e.preventDefault()
         this.props.handleSubmit(this.state.image, this.state.video)
+        console.log(this.state.video)
     }
     render(){
         return (
             <div className="form">
-                <h1>New Upload </h1>
+                <h1 className="h1" >Share Why You Think We All Need to Vote </h1>
                 <form onSubmit={this.onSubmit}>
                     <label>Image Upload</label>
-                    <input type="file" name="image" onChange={this.onChange}/>
+                    <input type="file" name="image"  onChange={this.onChange}/>
                     <br/>
                     <label>Video Upload</label>
                     <input type="file" name="video" onChange={this.onChange}/>
                     <br/>
-                    <input type="submit"/>
+                    <input classname="form-btn" type="submit"/>
                 </form>
             </div>
         )

@@ -7,9 +7,9 @@ const ItemContainer = props => {
 
     if (props.value.length > 0) {
     return (
-        <div >
+        <div class="itemContainer" >
           {props.value.map((item) =>(     
-            <Item item={item} key={item.id} />
+            <Item item={item} key={item.id} handleDelete={props.handleDelete} />
            ))}
         </div>
 
